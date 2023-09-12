@@ -138,7 +138,7 @@ h123 <- function(alpha.given) {
   h1.tilde <- h1.opt$maximum
   
   
-  h3.opt <- optimize(h3, c(-10, 10), maximum = FALSE, alpha = alpha.given, eta1 = eta1.piao, n = dn, v1 = dv1, v2 = dv2)
+  h3.opt <- optimize(h3, c(-20, 20), maximum = FALSE, alpha = alpha.given, eta1 = eta1.piao, n = dn, v1 = dv1, v2 = dv2)
   h3.tilde <- h3.opt$minimum
   
   h23 <- function(eta, alpha = alpha.given) {
@@ -167,7 +167,7 @@ alpha.hat <- alpha.opt$maximum
 N.hat.opt <- optimize(h1, c(dn, 100), maximum = TRUE, alpha = alpha.hat, n = dn)
 N.hat <- round(N.hat.opt$maximum)
 
-h3.opt <- optimize(h3, c(-10, 10), maximum = FALSE, alpha = alpha.hat, eta1 = eta1.piao, n = dn, v1 = dv1, v2 = dv2)
+h3.opt <- optimize(h3, c(-20, 20), maximum = FALSE, alpha = alpha.hat, eta1 = eta1.piao, n = dn, v1 = dv1, v2 = dv2)
 h3.tilde <- h3.opt$minimum
 
 h23 <- function(eta, alpha = alpha.hat) {
